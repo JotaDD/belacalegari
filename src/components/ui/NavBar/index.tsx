@@ -9,8 +9,8 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed w-full bg-ic-stone-200 p-2">
-      <div className="mx-auto flex w-[80%] max-w-screen-lg flex-wrap items-center justify-between">
+    <nav className="fixed w-full min-w-fit bg-ic-stone-200 p-2">
+      <div className="max-w-screen mx-auto flex w-[80%] flex-wrap items-center justify-between">
         <Logo />
         <div className="flex items-center space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
           <button
@@ -33,7 +33,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div
-          className={` ${isMenuOpen ? 'flex' : 'hidden'} flex h-fit w-full flex-col items-center justify-center py-2 text-center md:hidden`}
+          className={` ${isMenuOpen ? 'flex' : 'hidden'} flex h-fit w-full flex-col items-center justify-center  py-2 text-center md:hidden`}
         >
           <ul className="flex w-[50%] flex-col items-center justify-center ">
             <NavBarOptions
@@ -43,6 +43,11 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
+      <button
+        id="click-away-button"
+        className={`absolute h-screen w-screen bg-transparent md:hidden ${isMenuOpen ? '' : 'hidden'}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      ></button>
     </nav>
   )
 }
