@@ -1,25 +1,18 @@
-'use client'
-import { useState } from 'react'
-
-// type MenuButtonProps = {
-//   isOpen: boolean
-// }
-const MenuButton = () => {
-  const [isOpen, setIsOpen] = useState(false)
+type MenuButtonProps = {
+  isMenuOpen: boolean
+} & React.ButtonHTMLAttributes<HTMLButtonElement>
+const MenuButton = ({ isMenuOpen, ...props }: MenuButtonProps) => {
   return (
-    <button
-      onClick={() => setIsOpen(!isOpen)}
-      className="bg-ic-red-500 rounded-sm w-10 md:hidden"
-    >
-      <div className=" cursor-pointer inline-block">
+    <button {...props} className="w-10 rounded-sm bg-ic-red-500 md:hidden">
+      <div className=" inline-block cursor-pointer">
         <div
-          className={`${isOpen && 'transform translate-y-[10px] rotate-[-45deg]'} w-6  rounded-full h-1 bg-ic-stone-200 mt-[6px] transition-all duration-300 `}
+          className={`${isMenuOpen && 'translate-y-[10px] rotate-[-45deg] transform'} mt-[6px]  h-1 w-6 rounded-full bg-ic-stone-200 transition-all duration-300 `}
         ></div>
         <div
-          className={`${isOpen && 'opacity-0'} w-6  rounded-full h-1 bg-ic-stone-200 mt-[6px] transition-all duration-300 `}
+          className={`${isMenuOpen && 'opacity-0'} mt-[6px]  h-1 w-6 rounded-full bg-ic-stone-200 transition-all duration-300 `}
         ></div>
         <div
-          className={`${isOpen && 'transform translate-y-[-10px] rotate-[45deg]'} w-6  rounded-full h-1 bg-ic-stone-200 mt-[6px] transition-all duration-300`}
+          className={`${isMenuOpen && 'translate-y-[-10px] rotate-[45deg] transform'} mt-[6px]  h-1 w-6 rounded-full bg-ic-stone-200 transition-all duration-300`}
         ></div>
       </div>
     </button>

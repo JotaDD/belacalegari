@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
     <svg
-      className="md:w-[120px] w-[100px]"
+      className="w-[100px] md:w-[120px]"
       viewBox="0 0 124 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
