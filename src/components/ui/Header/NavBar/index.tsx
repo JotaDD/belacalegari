@@ -32,6 +32,7 @@ const NavBar = () => {
             <NavBarOptions navBarOptions={navBarOptions} />
           </ul>
         </div>
+        {/* Mobile Menu */}
         <div
           className={` ${isMenuOpen ? 'flex' : 'hidden'} flex h-fit w-full flex-col items-center justify-center  py-2 text-center md:hidden`}
         >
