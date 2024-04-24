@@ -27,7 +27,7 @@ const NavBar = () => {
         {/* Desktop Menu */}
         <div className="w-full items-center justify-between md:order-1 md:w-auto">
           <ul
-            className={` mt-4 hidden flex-col items-center border border-red-400 p-4 px-6 font-normal md:flex md:flex-row md:space-x-8 md:p-0 rtl:space-x-reverse `}
+            className={` mt-4 hidden flex-col items-center  p-4 px-6 font-normal md:flex md:flex-row md:space-x-8 md:p-0 rtl:space-x-reverse `}
           >
             <NavBarOptions navBarOptions={navBarOptions} />
           </ul>
