@@ -10,9 +10,9 @@ const Header = () => {
 
   return (
     <header className="flex w-full min-w-fit items-center justify-center  bg-ic-stone-200">
-      <div className="max-w-screen flex w-[80%] items-center justify-between">
+      <div className="max-w-screen  flex w-[80%] items-center justify-between py-2">
         <Logo />
-        <div className="flex w-fit gap-2 border border-red-500 md:order-2 md:space-x-8 rtl:space-x-reverse ">
+        <div className="flex w-fit gap-2  md:order-2 md:space-x-8 rtl:space-x-reverse ">
           <TranslateButton />
           <MenuButton
             isMenuOpen={isMenuOpen}

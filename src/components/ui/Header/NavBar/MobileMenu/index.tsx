@@ -7,7 +7,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: isMenuOpenType) => {
     // <nav className=" flex w-fit items-center justify-center border border-blue-500 sm:hidden">
     <nav
       id="click-away-wrapper"
-      className={` bg-ic-orange-500 fixed left-0 top-14 h-full w-full bg-opacity-40 backdrop-blur-sm md:hidden ${isMenuOpen ? 'flex' : 'hidden'}`}
+      className={` bg-ic-orange-500 fixed left-0 top-12 h-full w-full bg-opacity-40 backdrop-blur-sm md:hidden ${isMenuOpen ? 'flex' : 'hidden'}`}
       onClick={() => setIsMenuOpen(!isMenuOpen)}
     >
       <div
