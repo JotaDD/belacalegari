@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getRequestConfig } from 'next-intl/server'
 
-const defaultLocale = 'pt-BR'
+export const defaultLocale = 'pt-BR'
 export const locales = ['en-US', defaultLocale]
 
 export const i18n = {
@@ -14,6 +14,6 @@ export type Locale = (typeof locales)[number]
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale)) notFound()
   return {
-    messages: (await import(`../messages/${locale}.json`)).default,
+    messages: (await import(`../messages/${locale}.ts`)).default,
   }
 })
