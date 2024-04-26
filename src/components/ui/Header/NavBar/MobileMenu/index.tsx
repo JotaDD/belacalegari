@@ -1,6 +1,5 @@
-import { navBarOptions } from '@/lib/utils'
-import NavBarOptions from '../NavBarOptions'
 import { isMenuOpenType } from '@/lib/types'
+import NavBarOptions from '../NavBarOptions'
 
 const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: isMenuOpenType) => {
   return (
@@ -14,10 +13,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: isMenuOpenType) => {
         className={` ${isMenuOpen ? ' flex bg-ic-stone-200' : 'hidden'} h-fit w-full flex-col items-center justify-center px-5 py-2 text-center shadow-md md:hidden`}
       >
         <ul className="flex w-[50%] flex-col items-center justify-center ">
-          <NavBarOptions
-            navBarOptions={navBarOptions}
-            className=" w-full border-b border-ic-orange-900 pb-4 pt-2 hover:border-ic-red-500 hover:text-ic-red-500 hover:transition-colors hover:duration-300 md:text-ic-orange-900"
-          />
+          <NavBarOptions className=" w-full border-b border-ic-orange-900 pb-4 pt-2 hover:border-ic-red-500 hover:text-ic-red-500 hover:transition-colors hover:duration-300 md:text-ic-orange-900" />
         </ul>
       </div>
     </nav>

@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import profilePicture from '../../../public/images/card.png'
-import { useTranslations } from 'next-intl'
+import { useLocale } from 'next-intl'
+import { useDictionary } from '@/lib/utils'
 
 const Hero = () => {
-  const t = useTranslations('Index')
+  const locale = useLocale()
+  const d = useDictionary(locale) as { hero: { title: string } }
   return (
     <div>
       <Image
@@ -13,7 +15,7 @@ const Hero = () => {
         height={170}
         alt="profile picture"
       />
-      <h1>{t('title')}</h1>
+      <h1>{d.hero.title}</h1>
     </div>
   )
 }
