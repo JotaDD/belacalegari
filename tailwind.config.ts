@@ -20,6 +20,7 @@ const config = {
     extend: {
       colors: {
         'ic-orange-50': '#F8F3E9',
+        'ic-orange-100': '#FEE4B7',
         'ic-orange-300': '##E6C77E ',
         'ic-orange-400': '##E4A34D ',
         'ic-orange-800': '#A04D37 ',
