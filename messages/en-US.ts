@@ -1,5 +1,6 @@
 export const enUS = {
   hero: {
-    title: "Hi there! I'm Isabela",
+    title: 'Designer and Illustrator. ',
+    subtitle: 'I create to tell stories and generate connection.',
   },
 }

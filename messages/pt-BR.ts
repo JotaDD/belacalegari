@@ -1,5 +1,6 @@
 export const ptBR = {
   hero: {
-    title: 'Oi eu sou Isabela',
+    title: 'Designer e Ilustradora. ',
+    subtitle: 'Eu crio para contar histórias e gerar conexão.',
   },
 }
