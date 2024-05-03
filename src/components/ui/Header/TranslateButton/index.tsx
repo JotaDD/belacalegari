@@ -15,7 +15,7 @@ const TranslateButton = () => {
       onClick={handleLocaleChange}
       className="w-auto  text-center text-sm font-semibold text-ic-red-500 "
     >
-      PT-BR
+      PT - EN
     </button>
   )
 }
