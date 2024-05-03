@@ -1,21 +1,11 @@
-import Image from 'next/image'
-import profilePicture from '../../../public/images/card.png'
-import { useLocale } from 'next-intl'
-import { useDictionary } from '@/lib/utils'
+import Products from './Products'
+import Profile from './Profile'
 
 const Hero = () => {
-  const locale = useLocale()
-  const d = useDictionary(locale) as { hero: { title: string } }
   return (
-    <div>
-      <Image
-        priority={true}
-        src={profilePicture}
-        width={173}
-        height={170}
-        alt="profile picture"
-      />
-      <h1>{d.hero.title}</h1>
+    <div className="mt-8 flex w-[80%] max-w-[1200px] flex-col items-center justify-between lg:flex-row ">
+      <Profile />
+      <Products />
     </div>
   )
 }

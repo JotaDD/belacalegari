@@ -8,3 +8,9 @@ export type NavbarType = {
   nameUS: string
   href: string
 }
+
+export type ProductType = {
+  name: string
+  nameUs: string
+  link: string
+}
