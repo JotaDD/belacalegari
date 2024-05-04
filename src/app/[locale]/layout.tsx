@@ -24,7 +24,7 @@ export default function RootLayout({
 }: Readonly<RootLayoutType>) {
   return (
     <html lang={locale}>
-      <body className={`${poppins.className} bg-ic-light-yellow`}>
+      <body className={`${poppins.className} bg-ic-orange-50`}>
         <Header />
         {children}
       </body>

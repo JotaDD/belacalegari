@@ -10,7 +10,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="mb-8 flex h-full min-w-[215px] flex-col items-center justify-center lg:order-2">
+    <div className=" mb-8 flex h-full flex-col items-center justify-center  lg:order-2 lg:mb-0">
       <Image
         priority={true}
         src={profilePicture}
@@ -18,11 +18,11 @@ const Profile = () => {
         height={173}
         sizes="auto"
         alt="profile picture of Isabela"
-        className="min-w-[180px] rounded-full md:w-[320px]"
+        className="min-w-[180px] md:w-[320px]"
       />
-      <h2 className="w-[clamp(226px,40vw,350px)] text-center text-base text-ic-orange-900 md:text-2xl">
+      <h2 className=" mt-2 w-[clamp(180px,75vw,230px)] text-center text-base text-ic-orange-900 md:w-[260px] md:text-lg">
         <b>{d.hero.title}</b>
-        <span>{d.hero.subtitle}</span>
+        <p>{d.hero.subtitle}</p>
       </h2>
     </div>
   )
